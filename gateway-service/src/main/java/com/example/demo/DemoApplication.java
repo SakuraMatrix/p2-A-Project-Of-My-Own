@@ -16,13 +16,13 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	// @Bean
-	// public RouteLocator myRoutes(RouteLocatorBuilder builder) {
-	// 	return builder.routes()
-	// 		.route(p -> p
-	// 			.path("/")
-	// 			.uri("http://revature:54897/"))
-	// 		.build();
-	// }
+	 @Bean
+	 public RouteLocator myRoutes(RouteLocatorBuilder builder) {
+	 	return builder.routes()
+	 		.route(p -> p
+	 			.path("/")
+	 			.uri("lb://demo"))
+	 		.build();
+	 }
 
 }
